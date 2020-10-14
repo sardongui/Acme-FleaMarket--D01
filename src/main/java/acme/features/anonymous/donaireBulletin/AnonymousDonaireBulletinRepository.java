@@ -11,6 +11,6 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousDonaireBulletinRepository extends AbstractRepository {
 
-	@Query("Select db from DonaireBulletin db")
+	@Query("select db from DonaireBulletin db")
 	Collection<DonaireBulletin> findMany();
 }
