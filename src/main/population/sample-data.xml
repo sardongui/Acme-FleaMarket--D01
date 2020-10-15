@@ -16,5 +16,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- DonaireBulletin -->
+	<bean id="DonaireBulletin01" class="acme.entities.bulletins.DonaireBulletin">
+		<property name="author" value="Carlos Ruiz Zafón"/>
+		<property name="text" value="La sombra del viento"/>
+		<property name="moment" value="2020/05/01 21:00"/>
+	</bean>
 
 </beans>
