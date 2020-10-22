@@ -20,9 +20,14 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-donaire" action="https://www.idealista.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-martinez" action="https://www.twitter.com/"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.list-donaire-bulletin" action="/anonymous/donaire-bulletin/list" />
-			<acme:menu-suboption code="master.menu.anonymous.create-donaire-bulletin" action="/anonymous/donaire-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.create-donaire-bulletin" action="/anonymous/donaire-bulletin/create" />	
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.list-martinez-bulletin" action="/anonymous/martinez-bulletin/list" />
+			<acme:menu-suboption code="master.menu.anonymous.create-martinez-bulletin" action="/anonymous/martinez-bulletin/create" />
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

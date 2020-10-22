@@ -29,6 +29,8 @@
 
     drop table if exists `donaire_bulletin`;
 
+    drop table if exists `martinez_bulletin`;
+
     drop table if exists `provider`;
 
     drop table if exists `user_account`;
