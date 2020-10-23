@@ -253,7 +253,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$ImEX/KLlKyQ/POj8iXeQ7OJB/jeEwx3n2VL84Iin/3HBaC4Vyyg0m','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$XJTjRXH5duh3ypKsv1pkzu/WRaDFnZoJ/gGqJrwFhtK4FFmQAXTXy','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$jnCadc.CWg/5CsQkSuZQJOKe/.0GXvxvvFykvwGDXfnYlj4ECEfa.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$L1pQB4cccdxoEbG4PhJT/.Jka4rpFAKWk0jgeoQP4wE0GIf5rx/Gu','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -266,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-23 14:14:26
+-- Dump completed on 2020-10-23 20:28:57
