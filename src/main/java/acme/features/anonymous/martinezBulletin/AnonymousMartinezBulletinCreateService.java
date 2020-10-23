@@ -44,7 +44,7 @@ public class AnonymousMartinezBulletinCreateService implements AbstractCreateSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text");
+		request.unbind(entity, model, "web", "description");
 	}
 
 	@Override
@@ -55,8 +55,8 @@ public class AnonymousMartinezBulletinCreateService implements AbstractCreateSer
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);
-		result.setAuthor("J.K. Rowling");
-		result.setText("Harry Potter");
+		result.setWeb("Twitter");
+		result.setDescription("Donde las críticas constructivas, brillan por su ausencia.");
 		result.setMoment(moment);
 		return result;
 	}
