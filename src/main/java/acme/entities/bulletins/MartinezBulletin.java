@@ -1,3 +1,4 @@
+
 package acme.entities.bulletins;
 
 import java.util.Date;
@@ -20,10 +21,10 @@ public class MartinezBulletin extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private String				author;
+	private String				web;
 
 	@NotBlank
-	private String				text;
+	private String				description;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past

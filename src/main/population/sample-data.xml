@@ -23,5 +23,12 @@
 		<property name="text" value="La sombra del viento"/>
 		<property name="moment" value="2020/05/01 21:00"/>
 	</bean>
+	
+	<!-- MartinezBulletin -->
+	<bean id="MartinezBulletin01" class="acme.entities.bulletins.MartinezBulletin">
+		<property name="web" value="Twitter"/>
+		<property name="description" value="Donde las críticas constructivas, brillan por su ausencia."/>
+		<property name="moment" value="2020/10/22 17:30"/>
+	</bean>
 
 </beans>
