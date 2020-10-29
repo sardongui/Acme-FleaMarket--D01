@@ -43,6 +43,37 @@ INSERT INTO `administrator` VALUES (4,0,3);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `advertisement`
+--
+
+DROP TABLE IF EXISTS `advertisement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `advertisement` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `creation_moment` datetime(6) DEFAULT NULL,
+  `discounts` varchar(255) DEFAULT NULL,
+  `display_period` datetime(6) DEFAULT NULL,
+  `item` double DEFAULT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `advertisement`
+--
+
+LOCK TABLES `advertisement` WRITE;
+/*!40000 ALTER TABLE `advertisement` DISABLE KEYS */;
+INSERT INTO `advertisement` VALUES (8,0,'2020-07-21 16:00:00.000000','SMALL','2020-12-20 16:00:00.000000',3,'https://ar.pinterest.com/pin/833940055989345675/','Text Advertisement 1','Advertisement 1'),(9,0,'2020-10-21 16:00:00.000000','AVERAGE','2020-12-20 16:00:00.000000',5,'https://ar.pinterest.com/pin/833940055989345675/','Text Advertisement 2','Advertisement 2'),(10,0,'2020-04-02 00:00:00.000000','AVERAGE','2020-10-20 20:30:00.000000',4,'https://ar.pinterest.com/pin/833940055989345675/','Text Advertisement 3','Advertisement 3'),(11,0,'2020-10-12 11:02:00.000000','LARGE','2020-11-10 06:00:00.000000',7,'https://ar.pinterest.com/pin/833940055989345675/','Text Advertisement 4','Advertisement 4');
+/*!40000 ALTER TABLE `advertisement` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `anonymous`
 --
 
@@ -125,6 +156,34 @@ LOCK TABLES `consumer` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `customisation`
+--
+
+DROP TABLE IF EXISTS `customisation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customisation` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `items_categories` varchar(255) DEFAULT NULL,
+  `news_categories` varchar(255) DEFAULT NULL,
+  `spamwords` varchar(255) DEFAULT NULL,
+  `threshold` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customisation`
+--
+
+LOCK TABLES `customisation` WRITE;
+/*!40000 ALTER TABLE `customisation` DISABLE KEYS */;
+INSERT INTO `customisation` VALUES (24,0,'Toilette,Kitchen,Living room,Sleeping room,Garden','Breaking news,Important news,Warning,Information','sex,hard core,viagra,cialis,nigeria,you\'ve won, million dollar,sexo,duro,has ganado,millon de dolares',2.5);
+/*!40000 ALTER TABLE `customisation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `donaire_bulletin`
 --
 
@@ -148,6 +207,38 @@ CREATE TABLE `donaire_bulletin` (
 LOCK TABLES `donaire_bulletin` WRITE;
 /*!40000 ALTER TABLE `donaire_bulletin` DISABLE KEYS */;
 /*!40000 ALTER TABLE `donaire_bulletin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `figment`
+--
+
+DROP TABLE IF EXISTS `figment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `figment` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `creation_moment` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `max_money_amount` double DEFAULT NULL,
+  `max_money_currency` varchar(255) DEFAULT NULL,
+  `min_money_amount` double DEFAULT NULL,
+  `min_money_currency` varchar(255) DEFAULT NULL,
+  `name_inventor` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `figment`
+--
+
+LOCK TABLES `figment` WRITE;
+/*!40000 ALTER TABLE `figment` DISABLE KEYS */;
+INSERT INTO `figment` VALUES (13,0,'2020-10-22 09:00:00.000000','This is a description 1',70,'€',30,'€','Sara','Figment 1'),(14,0,'2020-10-10 19:00:00.000000','This is a description 2',20,'€',10,'€','Raquel','Figment 2');
+/*!40000 ALTER TABLE `figment` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -199,6 +290,90 @@ LOCK TABLES `martinez_bulletin` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `material_sheet`
+--
+
+DROP TABLE IF EXISTS `material_sheet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `material_sheet` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `provider_home_page` varchar(255) DEFAULT NULL,
+  `provider_name` varchar(255) DEFAULT NULL,
+  `rating` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `material_sheet`
+--
+
+LOCK TABLES `material_sheet` WRITE;
+/*!40000 ALTER TABLE `material_sheet` DISABLE KEYS */;
+INSERT INTO `material_sheet` VALUES (18,0,'Esto es Nuna hoja de inventario de ejemplo (1)','https://www.provider1.com','Provider 1',3,'Material Sheet 1'),(19,0,'Esto es una hoja de inventario de ejemplo (2)','https://www.provider1.com','Provider 1',1,'Material Sheet 2'),(20,0,'Esto es una hoja de inventario de ejemplo (3)','https://www.provider2.com','Provider 2',5,'Material Sheet 3');
+/*!40000 ALTER TABLE `material_sheet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `new`
+--
+
+DROP TABLE IF EXISTS `new`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `new` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `body` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `new`
+--
+
+LOCK TABLES `new` WRITE;
+/*!40000 ALTER TABLE `new` DISABLE KEYS */;
+INSERT INTO `new` VALUES (15,0,'Esto es una novedad de ejemplo (1)','Categoria-1','2020-11-20 22:00:00.000000','2020-10-25 09:21:00.000000','https://png.pngtree.com/picture-new1.jpg','Ejemplo1'),(16,0,'Esto es una novedad de ejemplo (2)','Categoria-1','2020-11-20 22:00:00.000000','2020-10-25 09:25:00.000000','https://png.pngtree.com/picture-new2.jpg','Ejemplo2'),(17,0,'Esto es una novedad de ejemplo (3)','Categoria-2','2020-10-23 21:00:00.000000','2020-10-22 10:00:00.000000','https://png.pngtree.com/picture-new3.jpg','Ejemplo3');
+/*!40000 ALTER TABLE `new` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `new_related_news`
+--
+
+DROP TABLE IF EXISTS `new_related_news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `new_related_news` (
+  `new_id` int NOT NULL,
+  `related_news` varchar(255) DEFAULT NULL,
+  KEY `FKekvcmka1939ggq2mk62n8khap` (`new_id`),
+  CONSTRAINT `FKekvcmka1939ggq2mk62n8khap` FOREIGN KEY (`new_id`) REFERENCES `new` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `new_related_news`
+--
+
+LOCK TABLES `new_related_news` WRITE;
+/*!40000 ALTER TABLE `new_related_news` DISABLE KEYS */;
+INSERT INTO `new_related_news` VALUES (16,'www.related-new1.com'),(16,'www.related-new2.com'),(17,'www.related-new3.com');
+/*!40000 ALTER TABLE `new_related_news` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `provider`
 --
 
@@ -224,6 +399,63 @@ CREATE TABLE `provider` (
 LOCK TABLES `provider` WRITE;
 /*!40000 ALTER TABLE `provider` DISABLE KEYS */;
 /*!40000 ALTER TABLE `provider` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `suggestion`
+--
+
+DROP TABLE IF EXISTS `suggestion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `suggestion` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `creation_moment` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `suggestion`
+--
+
+LOCK TABLES `suggestion` WRITE;
+/*!40000 ALTER TABLE `suggestion` DISABLE KEYS */;
+INSERT INTO `suggestion` VALUES (12,0,'2020-10-22 15:30:00.000000','Podemos hacerte una sugerencia si lo desea.','sardongui@us.es','Suggestion 01');
+/*!40000 ALTER TABLE `suggestion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tool_sheet`
+--
+
+DROP TABLE IF EXISTS `tool_sheet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tool_sheet` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `provider_home_page` varchar(255) DEFAULT NULL,
+  `provider_name` varchar(255) DEFAULT NULL,
+  `rating` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tool_sheet`
+--
+
+LOCK TABLES `tool_sheet` WRITE;
+/*!40000 ALTER TABLE `tool_sheet` DISABLE KEYS */;
+INSERT INTO `tool_sheet` VALUES (21,0,'Esto es una hoja de herramientas de ejemplo (1)','https://www.provider3.com','Provider 3',4,'Tool Sheet 1'),(22,0,'Esto es una hoja de herramientas de ejemplo (2)','https://www.provider4.com','Provider 4',2,'Tool Sheet 2'),(23,0,'Esto es una hoja de herramientas de ejemplo (3)','https://www.provider4.com','Provider 4',2,'Tool Sheet 3');
+/*!40000 ALTER TABLE `tool_sheet` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -253,7 +485,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$jnCadc.CWg/5CsQkSuZQJOKe/.0GXvxvvFykvwGDXfnYlj4ECEfa.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$L1pQB4cccdxoEbG4PhJT/.Jka4rpFAKWk0jgeoQP4wE0GIf5rx/Gu','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$ZEec0hwWsFSZJT8jswcHO./.G4aIvULB6/6LzQiV6Y3J5HEh6lKm.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$D33ak7KFir8/0XrgjZP.bOjzgnxupZeXBGFcdp73fQDOF8pW3P3Pm','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -266,4 +498,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-23 20:28:57
+-- Dump completed on 2020-10-29 10:16:55
