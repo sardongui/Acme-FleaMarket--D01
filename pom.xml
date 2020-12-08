@@ -56,12 +56,12 @@
 				<version>1.7.6</version>
 				<configuration>
 					<container>
-						<containerId>tomcat9x</containerId>
+						<containerId>tomcat8x</containerId>
 						<type>embedded</type>										
 					</container>
 					<configuration>
 						<properties>
-							 <cargo.servlet.port>80</cargo.servlet.port>							 
+							 <cargo.servlet.port>8080</cargo.servlet.port>							 
 						</properties>
 					</configuration>
 					<deployables>
