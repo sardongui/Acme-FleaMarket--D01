@@ -147,7 +147,6 @@ CREATE TABLE `donaire_bulletin` (
 
 LOCK TABLES `donaire_bulletin` WRITE;
 /*!40000 ALTER TABLE `donaire_bulletin` DISABLE KEYS */;
-INSERT INTO `donaire_bulletin` VALUES (6,0,'Carlos Ruiz Zafón','2020-05-01 19:00:00.000000','La sombra del viento');
 /*!40000 ALTER TABLE `donaire_bulletin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,7 +168,7 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (8);
+INSERT INTO `hibernate_sequence` VALUES (6);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +195,6 @@ CREATE TABLE `martinez_bulletin` (
 
 LOCK TABLES `martinez_bulletin` WRITE;
 /*!40000 ALTER TABLE `martinez_bulletin` DISABLE KEYS */;
-INSERT INTO `martinez_bulletin` VALUES (7,0,'Donde las críticas constructivas, brillan por su ausencia.','2020-10-22 15:30:00.000000','https://twitter.com/');
 /*!40000 ALTER TABLE `martinez_bulletin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,7 +253,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$7vtbnGuZZUEn1npU3Mvp8OqozEf4YudjZvOD8KXbrMziTjSuIX7lG','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$CHlpbvVoZLyXfK.fNuvnyu59xdW1D63Xdatk9olx8nRcG4zXn7UHm','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$m2OzK3RSE3Ml0XSUXoNPreD81PGqbaLzkxso6rI9fH1DZxogCplxS','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$W8LcH5GIKntc1Mc9qnXjG.hcSz0gMsAHD0hG./FB1.AGZ0Kaf9lB.','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -268,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-08 11:56:59
+-- Dump completed on 2020-12-08 13:32:24
